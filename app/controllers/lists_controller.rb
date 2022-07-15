@@ -1,9 +1,9 @@
 class ListsController < ApplicationController
-  
+
   def new
     @list = List.new
   end
-  
+
   def create
     list = List.new(list_params)
     list .save
@@ -11,6 +11,7 @@ class ListsController < ApplicationController
   end
 
   def index
+    @lists = List.all
   end
 
   def show
@@ -18,7 +19,7 @@ class ListsController < ApplicationController
 
   def edit
   end
-  
+
   private #privateはControllerファイルの一番下のendのすぐ上に書く
   #ストロングパラメータ
   def list_params
