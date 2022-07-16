@@ -31,6 +31,6 @@ class ListsController < ApplicationController
   private #privateはControllerファイルの一番下のendのすぐ上に書く
   #ストロングパラメータ
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 end
